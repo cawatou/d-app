@@ -1,0 +1,46 @@
+.table-sortable > thead > tr > th {
+  cursor: pointer;
+  position: relative;
+  padding-right: 20px !important;
+  background-image: none;
+}
+
+.table-sortable > thead > tr > th:before,
+.table-sortable > thead > tr > th:after,
+.table-sortable > thead > tr > th.sort-false:before,
+.table-sortable > thead > tr > th.sort-true:before,
+.table-sortable > thead > tr > th.sort-false:after,
+.table-sortable > thead > tr > th.sort-true:after {
+  top: 50%;
+  position: absolute;
+  content: '';
+  right: 5px;
+  width: 0;
+  height: 0;
+}
+
+.table-sortable > thead > tr > th:before {
+  margin-top: -5px;
+  border-style: solid;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent #ddd transparent;
+}
+.table-sortable > thead > tr > th:after {
+  margin-top: 1px;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #ddd transparent transparent transparent;
+}
+
+.table-sortable > thead > tr > th.sort-false:before {
+  margin-top: -5px;
+  border-style: solid;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent #000 transparent;
+}
+.table-sortable > thead > tr > th.sort-true:after {
+  margin-top: 1px;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #000 transparent transparent transparent;
+}
